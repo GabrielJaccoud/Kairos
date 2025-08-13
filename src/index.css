@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --deep-blue: #2C3E50;
+  --golden: #F1C40F;
+  --light-green: #8BC34A;
+  --clean-white: #FFFFFF;
+}
