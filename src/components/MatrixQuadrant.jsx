@@ -14,37 +14,37 @@ const MatrixQuadrant = ({
     urgent_important: {
       title: 'Urgente + Importante',
       subtitle: 'Crises e emergências',
-      color: '#E74C3C',
+      color: '#8B1538',
       icon: '🚨',
-      gradient: 'linear-gradient(135deg, #E74C3C, #C0392B)'
+      gradient: 'linear-gradient(135deg, #8B1538, #A0173F)'
     },
     important_not_urgent: {
       title: 'Importante + Não Urgente',
       subtitle: 'Planejamento e prevenção',
-      color: '#F1C40F',
+      color: '#B8860B',
       icon: '⭐',
-      gradient: 'linear-gradient(135deg, #F1C40F, #F39C12)'
+      gradient: 'linear-gradient(135deg, #B8860B, #DAA520)'
     },
     urgent_not_important: {
       title: 'Urgente + Não Importante',
       subtitle: 'Interrupções e distrações',
-      color: '#8BC34A',
+      color: '#CD853F',
       icon: '⚡',
-      gradient: 'linear-gradient(135deg, #8BC34A, #7CB342)'
+      gradient: 'linear-gradient(135deg, #CD853F, #D2691E)'
     },
     not_urgent_not_important: {
       title: 'Não Urgente + Não Importante',
       subtitle: 'Atividades triviais',
-      color: '#3498DB',
+      color: '#F4E4BC',
       icon: '📝',
-      gradient: 'linear-gradient(135deg, #3498DB, #2980B9)'
+      gradient: 'linear-gradient(135deg, #F4E4BC, #F5DEB3)'
     },
     presence: {
       title: 'Eixo da Presença',
       subtitle: 'Improvisos conscientes',
-      color: '#9B59B6',
+      color: '#8B4513',
       icon: '🌟',
-      gradient: 'linear-gradient(135deg, #9B59B6, #8E44AD)'
+      gradient: 'linear-gradient(135deg, #8B4513, #A0522D)'
     }
   };
 

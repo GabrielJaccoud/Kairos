@@ -245,7 +245,7 @@ function App() {
         <div className="header-content">
           <div className="logo-section">
             <div className="logo">
-              <div className="logo-icon">⏰</div>
+              <img src="/logo.png" alt="Kairos Logo" className="logo-image" />
               <span className="logo-text">Kairos</span>
             </div>
             <span className="tagline">Companion of Presence</span>
