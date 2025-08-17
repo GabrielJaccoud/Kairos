@@ -244,11 +244,11 @@ function App() {
       <header className="app-header">
         <div className="header-content">
           <div className="logo-section">
-            <div className="logo">
-              <img src="/logo.png" alt="Kairos Logo" className="logo-image" />
+            <img src="/logo.png" alt="Kairos Logo" className="logo-image" />
+            <div className="logo-text-container">
               <span className="logo-text">Kairos</span>
+              <span className="tagline">Companion of Presence</span>
             </div>
-            <span className="tagline">Companion of Presence</span>
           </div>
           
           <nav className="main-nav">
@@ -291,4 +291,5 @@ function App() {
 }
 
 export default App;
+
 
