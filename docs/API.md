@@ -361,6 +361,85 @@ Relatório semanal de presença.
 
 ---
 
+## AI Engine Endpoints (Integrados via Backend)
+
+O AI Engine não expõe endpoints diretamente, mas suas funcionalidades são acessadas através dos endpoints do Backend Flask. As chamadas para os modelos de IA são feitas internamente pela API.
+
+### POST /tasks/ai-optimize
+Otimiza tarefas usando o `Intelligent Task Optimizer` do AI Engine.
+
+**Body:**
+```json
+{
+  "tasks": [
+    { "id": 1, "title": "Tarefa A", "duration": 60, "priority": "high" },
+    { "id": 2, "title": "Tarefa B", "duration": 30, "priority": "medium" }
+  ]
+}
+```
+
+**Resposta:**
+```json
+{
+  "success": true,
+  "optimized_tasks": [/* tarefas otimizadas com sugestões de agendamento e prioridade */],
+  "message": "Tarefas otimizadas pela IA"
+}
+```
+
+### POST /reflections/analyze-presence
+Analisa dados de presença usando o `Advanced Presence Analyzer`.
+
+**Body:**
+```json
+{
+  "user_data": [
+    { "date": "2024-01-01", "presence_score": 7, "energy_level": 8 },
+    { "date": "2024-01-02", "presence_score": 6, "energy_level": 7 }
+  ]
+}
+```
+
+**Resposta:**
+```json
+{
+  "success": true,
+  "analysis_results": {
+    "peak_hours": "10:00-12:00",
+    "energy_cycles": "manhã alta, tarde baixa",
+    "stress_indicators": "nenhum"
+  },
+  "message": "Análise de presença concluída"
+}
+```
+
+### POST /rituals/suggest-adaptive
+Sugere rituais adaptativos usando o `Adaptive Ritual Engine`.
+
+**Body:**
+```json
+{
+  "user_state": {
+    "current_energy": 7,
+    "time_available": 15,
+    "mood": "estressado"
+  }
+}
+```
+
+**Resposta:**
+```json
+{
+  "success": true,
+  "suggested_rituals": [
+    { "name": "Respiração Rápida", "duration": 5, "type": "break" }
+  ],
+  "message": "Rituais adaptativos sugeridos"
+}
+```
+
+---
+
 ## Códigos de Status HTTP
 
 - `200 OK`: Requisição bem-sucedida

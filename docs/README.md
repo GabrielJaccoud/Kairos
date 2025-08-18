@@ -24,6 +24,9 @@ Uma evolução da matriz de Eisenhower que inclui o **Eixo da Presença** para m
 
 ### 🤖 IA como Mentor de Vida
 Inteligência artificial que aprende seus padrões e oferece insights personalizados para otimizar seu tempo e energia:
+- **Advanced Presence Analyzer**: Análise de padrões de presença, energia e foco
+- **Intelligent Task Optimizer**: Otimização inteligente de tarefas com algoritmos genéticos
+- **Adaptive Ritual Engine**: Rituais personalizados e adaptativos
 - Reorganização automática quando imprevistos surgem
 - Sugestões de pausas antes que o estresse apareça
 - Aprendizado do seu ritmo pessoal único

@@ -268,15 +268,17 @@ source venv/bin/activate
 # Instalar dependências
 pip install -r requirements.txt
 
-# Configurar como serviço (opcional)
-sudo nano /etc/supervisor/conf.d/kairos-ai.conf
+# Testar componentes
+python advanced_presence_analyzer.py
+python intelligent_task_optimizer.py
+python adaptive_ritual_engine.py
 ```
 
 **Configuração do AI Engine** (`/etc/supervisor/conf.d/kairos-ai.conf`):
 
 ```ini
 [program:kairos-ai]
-command=/home/kairos/Kairos/ai-engine/venv/bin/python task-optimizer.py
+command=/home/kairos/Kairos/ai-engine/venv/bin/python intelligent_task_optimizer.py
 directory=/home/kairos/Kairos/ai-engine
 user=kairos
 autostart=true

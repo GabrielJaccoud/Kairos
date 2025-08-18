@@ -264,11 +264,11 @@ pip install -r requirements.txt
 
 ```
 ai-engine/
-├── task-optimizer.py          # Otimização de tarefas
-├── presence-analyzer.py       # Análise de presença
-├── recommendation-engine.py   # Sistema de recomendações
-├── venv/                      # Ambiente virtual
-└── requirements.txt           # Dependências
+├── advanced_presence_analyzer.py  # Análise avançada de presença
+├── intelligent_task_optimizer.py  # Otimização inteligente de tarefas
+├── adaptive_ritual_engine.py      # Motor de rituais adaptativos
+├── venv/                          # Ambiente virtual
+└── requirements.txt               # Dependências
 ```
 
 ### Padrões de Código AI
