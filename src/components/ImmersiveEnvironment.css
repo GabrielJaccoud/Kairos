@@ -1,0 +1,404 @@
+/* Immersive Environment Styles */
+.immersive-environment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.environment-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Phase: Entering */
+.phase-entering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.environment-preview h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.environment-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out 0.5s forwards;
+}
+
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pulse-circle {
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.pulse-circle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: innerPulse 2s ease-in-out infinite;
+}
+
+/* Phase: Experiencing */
+.phase-experiencing {
+  width: 100%;
+  height: 100%;
+}
+
+.environment-display {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.environment-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: background 3s ease-in-out;
+}
+
+.environment-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.breathing-guide {
+  margin-bottom: 3rem;
+}
+
+.breathing-circle {
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 1s ease-in-out;
+  margin: 0 auto;
+}
+
+.breathing-circle.active.inhale {
+  transform: scale(1.3);
+  border-color: rgba(135, 206, 235, 0.8);
+  box-shadow: 0 0 30px rgba(135, 206, 235, 0.5);
+}
+
+.breathing-circle.active.hold {
+  transform: scale(1.3);
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.breathing-circle.active.exhale {
+  transform: scale(1);
+  border-color: rgba(144, 238, 144, 0.8);
+  box-shadow: 0 0 30px rgba(144, 238, 144, 0.5);
+}
+
+.breathing-inner {
+  text-align: center;
+}
+
+.breathing-instruction {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cycle-counter {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.environment-text {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.environment-text .environment-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.mantra-display {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.session-info {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.time-remaining {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.breathing-pattern-name {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Phase: Completing */
+.phase-completing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.completion-content {
+  max-width: 600px;
+}
+
+.completion-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #87CEEB;
+}
+
+.session-summary {
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.session-summary p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.reflection-prompt {
+  margin-top: 2rem;
+}
+
+.reflection-prompt h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.reflection-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+.reflection-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.reflection-textarea:focus {
+  outline: none;
+  border-color: #87CEEB;
+  box-shadow: 0 0 10px rgba(135, 206, 235, 0.3);
+}
+
+.completion-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.complete-button {
+  background: linear-gradient(135deg, #87CEEB, #4682B4);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+}
+
+.complete-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
+}
+
+/* Environment Controls */
+.environment-controls {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.breathing-toggle,
+.skip-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.breathing-toggle:hover,
+.skip-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes innerPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .environment-overlay {
+    padding: 1rem;
+  }
+  
+  .breathing-circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .environment-preview h2,
+  .completion-content h2 {
+    font-size: 2rem;
+  }
+  
+  .time-remaining {
+    font-size: 1.5rem;
+  }
+  
+  .environment-controls {
+    top: 1rem;
+    right: 1rem;
+    flex-direction: column;
+  }
+  
+  .breathing-toggle,
+  .skip-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .environment-text .environment-description {
+    font-size: 1rem;
+  }
+  
+  .mantra-display {
+    font-size: 1.1rem;
+  }
+  
+  .breathing-instruction {
+    font-size: 1rem;
+  }
+  
+  .reflection-textarea {
+    font-size: 0.9rem;
+  }
+}
+

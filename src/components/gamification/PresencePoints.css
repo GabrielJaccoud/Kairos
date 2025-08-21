@@ -1,0 +1,362 @@
+/* Presence Points Styles */
+.presence-points {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Points Header */
+.points-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.points-display {
+  text-align: left;
+}
+
+.points-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  display: inline-block;
+}
+
+.points-animation {
+  position: absolute;
+  top: -10px;
+  right: -60px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: pointsFloat 2s ease-out forwards;
+  pointer-events: none;
+}
+
+.points-animation.positive {
+  color: #28a745;
+}
+
+.points-animation.negative {
+  color: #dc3545;
+}
+
+.points-label {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.level-display {
+  display: flex;
+  align-items: center;
+}
+
+.level-badge {
+  background: linear-gradient(135deg, #87CEEB, #4682B4);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.level-badge:hover {
+  transform: translateY(-2px);
+}
+
+.level-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.level-name {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-top: 0.2rem;
+}
+
+/* Progress Section */
+.progress-section {
+  margin-bottom: 2rem;
+}
+
+.progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+.current-level {
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.progress-arrow {
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.next-level {
+  color: #87CEEB;
+  font-size: 1.1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #87CEEB, #4682B4);
+  border-radius: 6px;
+  transition: width 1.5s ease-out;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Points Details */
+.points-details {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.points-details h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.activities-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  border-left: 4px solid #87CEEB;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-description {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.activity-date {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.activity-points {
+  font-weight: 700;
+  color: #28a745;
+  font-size: 1.1rem;
+  background: rgba(40, 167, 69, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+}
+
+.no-activities {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.no-activities p {
+  margin-bottom: 0.5rem;
+}
+
+.no-activities-hint {
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Points Philosophy */
+.points-philosophy {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.philosophy-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(255, 215, 0, 0.1));
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #FFD700;
+}
+
+/* Animations */
+@keyframes pointsFloat {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Custom Scrollbar */
+.activities-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activities-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.activities-list::-webkit-scrollbar-thumb {
+  background: #87CEEB;
+  border-radius: 3px;
+}
+
+.activities-list::-webkit-scrollbar-thumb:hover {
+  background: #4682B4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .presence-points {
+    padding: 1.5rem;
+  }
+  
+  .points-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .points-number {
+    font-size: 2.5rem;
+  }
+  
+  .level-badge {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .level-number {
+    font-size: 1.3rem;
+  }
+  
+  .progress-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .progress-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .activity-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .activity-points {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .points-number {
+    font-size: 2rem;
+  }
+  
+  .points-details h3 {
+    font-size: 1.3rem;
+  }
+  
+  .philosophy-text {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+  
+  .activities-list {
+    max-height: 250px;
+  }
+}
+
