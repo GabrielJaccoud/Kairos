@@ -456,3 +456,44 @@ body {
   }
 }
 
+.ritual-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.immersive-experience-btn,
+.scenario-simulator-btn {
+  background: linear-gradient(135deg, #87CEEB, #4682B4);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.immersive-experience-btn:hover,
+.scenario-simulator-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
+}
+
+.scenario-simulator-btn {
+  background: linear-gradient(135deg, #DDA0DD, #9370DB);
+  box-shadow: 0 4px 15px rgba(221, 160, 221, 0.3);
+}
+
+.scenario-simulator-btn:hover {
+  box-shadow: 0 6px 20px rgba(221, 160, 221, 0.4);
+}
+
+

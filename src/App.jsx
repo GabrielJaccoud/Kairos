@@ -375,8 +375,7 @@ function App() {
           />
         ))}
       </div>
-      
-      {/* Botão para experiência imersiva */}
+      {/* Botões para experiência imersiva e simulador de cenários */}
       <div className="ritual-actions">
         <button 
           className="immersive-experience-btn"
@@ -490,32 +489,30 @@ function App() {
         {currentView === 'rituals' && renderRitualsView()}
         {currentView === 'reflection' && renderReflectionView()}
         {currentView === 'presence' && renderPresenceView()}
+
+        {showImmersiveEnvironment && (
+          <ImmersiveEnvironment
+            environment={currentEnvironment}
+            onComplete={handleImmersiveExperienceComplete}
+            onExit={() => setShowImmersiveEnvironment(false)}
+          />
+        )}
+
+        {showScenarioSimulator && (
+          <ScenarioSimulator
+            onComplete={handleScenarioComplete}
+            onExit={() => setShowScenarioSimulator(false)}
+          />
+        )}
       </main>
 
       <footer className="app-footer">
-        <p>Desenvolvido com presença e propósito • Kairos v2.0</p>
+        <p>&copy; 2025 Kairos. Desenvolvido com presença e propósito.</p>
       </footer>
-
-      {/* Componentes Modais */}
-      {showImmersiveEnvironment && (
-        <ImmersiveEnvironment
-          environment={currentEnvironment}
-          onComplete={handleImmersiveExperienceComplete}
-          isActive={showImmersiveEnvironment}
-          userInput={userEmotionalState}
-        />
-      )}
-
-      {showScenarioSimulator && (
-        <ScenarioSimulator
-          onScenarioComplete={handleScenarioComplete}
-          userEmotionalState={userEmotionalState}
-          isActive={showScenarioSimulator}
-        />
-      )}
     </div>
   );
 }
 
 export default App;
+
 
